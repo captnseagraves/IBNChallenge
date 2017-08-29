@@ -6,9 +6,9 @@ class Kraken extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ETH: "0.000000",
-      DASH: "0.000000",
-      LTC: "0.000000"
+      ETH: "0.00000000",
+      DASH: "0.00000000",
+      LTC: "0.00000000"
     };
   }
 
@@ -35,8 +35,21 @@ componentWillMount() {
       this.setState({
         DASH: result2.result.DASHXBT.a[0]
       })
-    })  
+    })
   }, 3000)
+
+  setInterval(() => {
+    fetch('https://api.kraken.com/0/public/Ticker?pair=LTCXBT').then(result => {
+    return result.json()
+    })
+    .then((result2) => {
+      console.log("Kraken LTC result2", result2.result.XLTCXXBT.a[0]);
+      this.setState({
+        LTC: result2.result.XLTCXXBT.a[0]
+      })
+    })
+  }, 3000)
+
 }
 
   render() {
