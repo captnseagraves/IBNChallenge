@@ -16,7 +16,29 @@ class Poloniex extends Component {
   render() {
     return (
       <div>
-        <h2>Poloniex</h2>
+
+          <div id="wrapper">
+
+              <section id="main">
+                <header>
+                  <h1>Poloniex</h1>
+                </header>
+
+                <hr />
+
+                <h2>This is where Data will go</h2>
+
+                <hr />
+
+                <footer>
+                  <ul className="actions">
+                    <li><a href="#" className="button">Get Started</a></li>
+                  </ul>
+                </footer>
+              </section>
+
+          </div>
+
       </div>
     )
   }

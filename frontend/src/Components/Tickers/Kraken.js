@@ -15,7 +15,29 @@ componentWillMount = () => {
   render() {
     return (
       <div>
-        <h2>Kraken</h2>
+
+          <div id="wrapper">
+
+              <section id="main">
+                <header>
+                  <h1>Kraken</h1>
+                </header>
+
+                <hr />
+
+                <h2>This is where Data will go</h2>
+
+                <hr />
+
+                <footer>
+                  <ul className="actions">
+                    <li><a href="#" className="button">Get Started</a></li>
+                  </ul>
+                </footer>
+              </section>
+
+          </div>
+
       </div>
     )
   }
