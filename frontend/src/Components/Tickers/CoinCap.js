@@ -4,6 +4,15 @@ import './Tickers.css';
 
 
 class CoinCap extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      BTC: "",
+      ETH: "",
+      DASH: "",
+      LTC: ""
+    };
+  }
 
 componentWillMount = () => {
   setInterval(function() {
@@ -19,7 +28,7 @@ componentWillMount = () => {
       <div>
 
     			<div id="wrapper">
-            
+
     					<section id="main">
     						<header>
     							<h1>CoinCap</h1>

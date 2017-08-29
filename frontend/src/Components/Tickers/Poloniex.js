@@ -4,11 +4,29 @@ import './Tickers.css';
 
 class Poloniex extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      ETH: "0.00000000",
+      DASH: "0.00000000",
+      LTC: "0.00000000"
+    };
+  }
+
   componentWillMount () {
 
-    setInterval(function() {
+    setInterval(() => {
+      console.log('ETH', this.state.ETH);
       fetch('https://poloniex.com/public?command=returnTicker').then(result => {
-        console.log("Poloniex",result.json());
+        // console.log('Polo', result.json());
+        return result.json()
+      }).then((result2) => {
+        console.log("Poloniex result2", result2.BTC_LTC.lowestAsk);
+        this.setState({
+          LTC: result2.BTC_LTC.lowestAsk,
+          ETH: result2.BTC_ETH.lowestAsk,
+          DASH: result2.BTC_DASH.lowestAsk
+        })
       })
     }, 3000)
   }
@@ -26,7 +44,9 @@ class Poloniex extends Component {
 
                 <hr />
 
-                <h2>This is where Data will go</h2>
+                <h2>BTC => ETH {this.state.ETH}</h2>
+                <h2>BTC => LTC {this.state.LTC}</h2>
+                <h2>BTC => DASH {this.state.DASH}</h2>
 
                 <hr />
 

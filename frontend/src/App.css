@@ -30,6 +30,10 @@
 @import url('font-awesome.min.css');
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 /*
 	Identity by HTML5 UP
 	html5up.net | @ajlkn
@@ -887,6 +891,7 @@
 
 .exchange {
   padding: 0;
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .exRow {
