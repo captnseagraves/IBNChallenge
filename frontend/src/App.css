@@ -8,14 +8,15 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  background: transparent;
+  height: 15vmin;
+  padding: 5vmin;
   color: white;
 }
 
 .App-intro {
   font-size: large;
+  color: white;
 }
 
 @keyframes App-logo-spin {
@@ -897,4 +898,17 @@
 .exRow {
   display: inline;
   background: transparent;
+}
+
+.color {
+  text-shadow: .5px .5px white;
+}
+
+.header {
+  font-size: 4vmin;
+  padding: 3vmin;
+}
+
+.intro {
+  font-size: 2.25vmin;
 }

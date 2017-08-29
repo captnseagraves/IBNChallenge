@@ -11,17 +11,25 @@ class Home extends Component {
     return (
       <div>
 
+          <h1 className="header color">BitTracker</h1>
 
-          <h2>Welcome to BitTracker</h2>
-
+          <p className="intro color">Up-to-date prices for BitCoin to crypto-currency conversions from three top exchanges</p>
 
         <Grid>
           <Row className="show-grid exRow">
             <Col xs={12} md={4} className="exchange"><code> <Poloniex /> </code></Col>
-            <Col xs={6} md={4} className="exchange"><code> <CoinCap /> </code></Col>
-            <Col xs={6} md={4} className="exchange"><code> <Kraken /> </code></Col>
+            <Col xs={12} md={4} className="exchange"><code> <CoinCap /> </code></Col>
+            <Col xs={12} md={4} className="exchange"><code> <Kraken /> </code></Col>
           </Row>
         </Grid>
+
+
+        <footer id="footer">
+          <ul className="copyright">
+            <li>**Prices updated at three second intervals and may not represent price at time of purchase**</li> <br></br>
+            <li>&copy; Kevin Seagraves 2017</li>
+          </ul>
+        </footer>
       </div>
     )
   }

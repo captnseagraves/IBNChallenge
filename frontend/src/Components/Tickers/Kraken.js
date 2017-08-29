@@ -22,7 +22,7 @@ componentWillMount() {
     }).then((result2) => {
       console.log("Kraken result2", result2.result.XETHXXBT.a[0]);
       this.setState({
-        ETH: result2.result.XETHXXBT.a[0]
+        ETH: Number((result2.result.XETHXXBT.a[0])).toFixed(8)
       })
     })
   }, 3000)
@@ -33,7 +33,7 @@ componentWillMount() {
     }).then((result2) => {
       console.log("Kraken dash result2", result2.result.DASHXBT.a[0]);
       this.setState({
-        DASH: result2.result.DASHXBT.a[0]
+        DASH: Number((result2.result.DASHXBT.a[0])).toFixed(8)
       })
     })
   }, 3000)
@@ -45,7 +45,7 @@ componentWillMount() {
     .then((result2) => {
       console.log("Kraken LTC result2", result2.result.XLTCXXBT.a[0]);
       this.setState({
-        LTC: result2.result.XLTCXXBT.a[0]
+        LTC: Number((result2.result.XLTCXXBT.a[0])).toFixed(8)
       })
     })
   }, 3000)
@@ -73,9 +73,9 @@ componentWillMount() {
 
                 <footer>
                   <ul className="actions">
-                    <li><a href="#" className="button">Get Started</a></li>
+                    <li><a href="https://www.kraken.com/charts" className="button">Go to Kraken</a></li>
                   </ul>
-                </footer>
+    						</footer>
               </section>
 
           </div>

@@ -20,7 +20,7 @@ componentWillMount = () => {
     }).then((result2) => {
       console.log("CoinCap ETH result2", result2.price_btc);
       this.setState({
-        ETH: result2.price_btc
+        ETH: (result2.price_btc).toFixed(8)
       })
     })
 
@@ -29,7 +29,7 @@ componentWillMount = () => {
     }).then((result2) => {
       console.log("CoinCap LTC result2", result2.price_btc);
       this.setState({
-        LTC: result2.price_btc
+        LTC: (result2.price_btc).toFixed(8)
       })
     })
 
@@ -38,7 +38,7 @@ componentWillMount = () => {
     }).then((result2) => {
       console.log("CoinCap DASH result2", result2.price_btc);
       this.setState({
-        DASH: result2.price_btc
+        DASH: (result2.price_btc).toFixed(8)
       })
     })
 
@@ -67,16 +67,12 @@ componentWillMount = () => {
 
     						<footer>
                   <ul className="actions">
-                    <li><a href="#" className="button">Get Started</a></li>
+                    <li><a href="https://coinmarketcap.com/" className="button">Go to CoinCap</a></li>
                   </ul>
     						</footer>
     					</section>
 
-    					<footer id="footer">
-    						<ul className="copyright">
-    							<li>&copy; Kevin Seagraves 2017</li>
-    						</ul>
-    					</footer>
+
 
     			</div>
 
