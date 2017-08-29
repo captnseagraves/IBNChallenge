@@ -65,9 +65,9 @@ componentWillMount() {
 
                 <hr />
 
-                <h2>BTC => ETH {this.state.ETH}</h2>
-                <h2>BTC => LTC {this.state.LTC}</h2>
-                <h2>BTC => DASH {this.state.DASH}</h2>
+                <h2>ETH {this.state.ETH}</h2>
+                <h2>LTC {this.state.LTC}</h2>
+                <h2>DASH {this.state.DASH}</h2>
 
                 <hr />
 

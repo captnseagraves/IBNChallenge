@@ -7,18 +7,41 @@ class CoinCap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      BTC: "",
-      ETH: "",
-      DASH: "",
-      LTC: ""
+      ETH: "0.00000000",
+      DASH: "0.00000000",
+      LTC: "0.00000000"
     };
   }
 
 componentWillMount = () => {
-  setInterval(function() {
-    fetch('https://www.coincap.io/page/BTC').then(result => {
-      console.log("CoinCap", result.json());
+  setInterval(() => {
+    fetch('https://www.coincap.io/page/ETH').then(result => {
+      return result.json()
+    }).then((result2) => {
+      console.log("CoinCap ETH result2", result2.price_btc);
+      this.setState({
+        ETH: result2.price_btc
+      })
     })
+
+    fetch('https://www.coincap.io/page/LTC').then(result => {
+      return result.json()
+    }).then((result2) => {
+      console.log("CoinCap LTC result2", result2.price_btc);
+      this.setState({
+        LTC: result2.price_btc
+      })
+    })
+
+    fetch('https://www.coincap.io/page/DASH').then(result => {
+      return result.json()
+    }).then((result2) => {
+      console.log("CoinCap DASH result2", result2.price_btc);
+      this.setState({
+        DASH: result2.price_btc
+      })
+    })
+
   }, 3000)
 }
 
@@ -36,7 +59,9 @@ componentWillMount = () => {
 
     						<hr />
 
-                <h2>This is where Data will go</h2>
+                <h2>ETH {this.state.ETH}</h2>
+                <h2>LTC {this.state.LTC}</h2>
+                <h2>DASH {this.state.DASH}</h2>
 
     						<hr />
 
