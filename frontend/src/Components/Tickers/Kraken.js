@@ -25,9 +25,7 @@ componentWillMount() {
         ETH: Number((result2.result.XETHXXBT.a[0])).toFixed(8)
       })
     })
-  }, 3000)
 
-  setInterval(() => {
     fetch('https://api.kraken.com/0/public/Ticker?pair=DASHXBT').then(result => {
       return result.json()
     }).then((result2) => {
@@ -36,9 +34,7 @@ componentWillMount() {
         DASH: Number((result2.result.DASHXBT.a[0])).toFixed(8)
       })
     })
-  }, 3000)
 
-  setInterval(() => {
     fetch('https://api.kraken.com/0/public/Ticker?pair=LTCXBT').then(result => {
     return result.json()
     })
