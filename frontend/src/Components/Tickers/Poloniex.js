@@ -4,32 +4,6 @@ import './Tickers.css';
 
 class Poloniex extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      ETH: "0.00000000",
-      DASH: "0.00000000",
-      LTC: "0.00000000"
-    };
-  }
-
-  // componentWillMount () {
-  //
-  //   setInterval(() => {
-  //     fetch('https://poloniex.com/public?command=returnTicker').then(result => {
-  //       // console.log('Polo', result.json());
-  //       return result.json()
-  //     }).then((result2) => {
-  //       // console.log("Poloniex result2", result2.BTC_LTC.lowestAsk);
-  //       this.setState({
-  //         LTC: result2.BTC_LTC.lowestAsk,
-  //         ETH: result2.BTC_ETH.lowestAsk,
-  //         DASH: result2.BTC_DASH.lowestAsk
-  //       })
-  //     })
-  //   }, 3000)
-  // }
-
   render() {
     return (
       <div>
