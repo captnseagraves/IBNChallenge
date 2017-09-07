@@ -6,6 +6,8 @@ import Poloniex from '../Tickers/Poloniex.js'
 import CoinCap from '../Tickers/CoinCap.js'
 import Kraken from '../Tickers/Kraken.js'
 
+
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -21,6 +23,7 @@ class Home extends Component {
       CoinCap_LTC: "0.00000000"
     };
   }
+
 
   componentWillMount = () => {
     setInterval(() => {
@@ -40,8 +43,13 @@ class Home extends Component {
           CoinCap_DASH: (result2[2].coincap[1].price_btc).toFixed(8),
           CoinCap_ETH: (result2[2].coincap[0].price_btc).toFixed(8)
         })
+
+        console.log('ltc lowest', Math.min(this.state.Kraken_LTC, this.state.Poloniex_LTC, this.state.CoinCap_LTC))
+
       })
     }, 3000)
+
+
   }
 
   render() {
