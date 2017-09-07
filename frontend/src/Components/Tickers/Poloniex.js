@@ -3,6 +3,49 @@ import './Tickers.css';
 
 
 class Poloniex extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    lowest_LTC: {},
+    lowest_DASH: {},
+    lowest_ETH: {}
+    };
+  }
+
+  componentWillReceiveProps = () => {
+    console.log(this.props);
+    if (this.props.Poloniex_LTC === this.props.lowest_LTC) {
+      this.setState({
+        lowest_LTC: {color:"green"}
+      })
+    } else if (this.props.Poloniex_LTC !== this.props.lowest_LTC) {
+      this.setState({
+        lowest_LTC: {}
+      })
+    }
+
+    if (this.props.Poloniex_DASH === this.props.lowest_DASH) {
+      this.setState({
+        lowest_DASH: {color:"green"}
+      })
+    } else if (this.props.Poloniex_DASH !== this.props.lowest_DASH) {
+      this.setState({
+        lowest_DASH: {}
+      })
+    }
+
+    if (this.props.Poloniex_ETH === this.props.lowest_ETH) {
+      console.log('in lowest polo eth');
+      this.setState({
+        lowest_ETH: {color:"green"}
+      })
+    } else if (this.props.Poloniex_ETH !== this.props.lowest_ETH) {
+      this.setState({
+        lowest_ETH: {}
+      })
+    }
+
+  }
 
   render() {
     return (
@@ -17,9 +60,9 @@ class Poloniex extends Component {
 
                 <hr />
 
-                <h2>ETH {this.props.Poloniex_ETH}</h2>
-                <h2>LTC {this.props.Poloniex_LTC}</h2>
-                <h2>DASH {this.props.Poloniex_DASH}</h2>
+                <h2 style={this.state.lowest_ETH} >ETH {this.props.Poloniex_ETH}</h2>
+                <h2 style={this.state.lowest_LTC}>LTC {this.props.Poloniex_LTC}</h2>
+                <h2 style={this.state.lowest_DASH}>DASH {this.props.Poloniex_DASH}</h2>
 
                 <hr />
 
