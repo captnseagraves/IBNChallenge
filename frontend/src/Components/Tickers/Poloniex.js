@@ -13,23 +13,22 @@ class Poloniex extends Component {
     };
   }
 
-  componentWillMount () {
-
-    setInterval(() => {
-      console.log('ETH', this.state.ETH);
-      fetch('https://poloniex.com/public?command=returnTicker').then(result => {
-        // console.log('Polo', result.json());
-        return result.json()
-      }).then((result2) => {
-        console.log("Poloniex result2", result2.BTC_LTC.lowestAsk);
-        this.setState({
-          LTC: result2.BTC_LTC.lowestAsk,
-          ETH: result2.BTC_ETH.lowestAsk,
-          DASH: result2.BTC_DASH.lowestAsk
-        })
-      })
-    }, 3000)
-  }
+  // componentWillMount () {
+  //
+  //   setInterval(() => {
+  //     fetch('https://poloniex.com/public?command=returnTicker').then(result => {
+  //       // console.log('Polo', result.json());
+  //       return result.json()
+  //     }).then((result2) => {
+  //       // console.log("Poloniex result2", result2.BTC_LTC.lowestAsk);
+  //       this.setState({
+  //         LTC: result2.BTC_LTC.lowestAsk,
+  //         ETH: result2.BTC_ETH.lowestAsk,
+  //         DASH: result2.BTC_DASH.lowestAsk
+  //       })
+  //     })
+  //   }, 3000)
+  // }
 
   render() {
     return (
@@ -44,9 +43,9 @@ class Poloniex extends Component {
 
                 <hr />
 
-                <h2>ETH {this.state.ETH}</h2>
-                <h2>LTC {this.state.LTC}</h2>
-                <h2>DASH {this.state.DASH}</h2>
+                <h2>ETH {this.props.Poloniex_ETH}</h2>
+                <h2>LTC {this.props.Poloniex_LTC}</h2>
+                <h2>DASH {this.props.Poloniex_DASH}</h2>
 
                 <hr />
 
