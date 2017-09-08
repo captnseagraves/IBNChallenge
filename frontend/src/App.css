@@ -902,6 +902,8 @@
 
 .color {
   text-shadow: .5px .5px white;
+  margin:auto;
+  text-align: center;
 }
 
 .header {
@@ -915,4 +917,11 @@
 
 .green {
   color: green;
+}
+
+#particles canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import './Home.css';
 import {Grid, Col, Row} from 'react-bootstrap'
 
 import Poloniex from '../Tickers/Poloniex.js'
 import CoinCap from '../Tickers/CoinCap.js'
 import Kraken from '../Tickers/Kraken.js'
-
 
 
 class Home extends Component {
@@ -26,7 +24,6 @@ class Home extends Component {
       lowest_ETH: ""
     };
   }
-
 
   componentWillMount = () => {
     setInterval(() => {
@@ -63,8 +60,6 @@ class Home extends Component {
 
       })
     }, 3000)
-
-
   }
 
   render() {

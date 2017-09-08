@@ -8,7 +8,8 @@
     "poloniex-api": "^1.2.4",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-particles-js": "^1.5.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.12"

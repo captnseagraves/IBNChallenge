@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Tickers.css';
 
 
 class Poloniex extends Component {
@@ -13,7 +12,6 @@ class Poloniex extends Component {
   }
 
   componentWillReceiveProps = () => {
-    console.log(this.props);
 
     this.props.Poloniex_LTC === this.props.lowest_LTC ? this.setState({
       lowest_LTC: "green"

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Tickers.css';
 
 
 class Kraken extends Component {
@@ -13,7 +12,6 @@ class Kraken extends Component {
   }
 
   componentWillReceiveProps = () => {
-    console.log(this.props);
 
     this.props.Kraken_LTC === this.props.lowest_LTC ? this.setState({
       lowest_LTC: "green"
@@ -32,7 +30,7 @@ class Kraken extends Component {
     }) : this.setState({
       lowest_ETH: ""
     })
-    
+
   }
 
   render() {
