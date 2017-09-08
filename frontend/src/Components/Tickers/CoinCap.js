@@ -33,36 +33,6 @@ class CoinCap extends Component {
       lowest_ETH: ""
     })
 
-    // if (this.props.CoinCap_LTC === this.props.lowest_LTC) {
-    //   this.setState({
-    //     lowest_LTC: "green"
-    //   })
-    // } else if (this.props.CoinCap_LTC !== this.props.lowest_LTC) {
-    //   this.setState({
-    //     lowest_LTC: ""
-    //   })
-    // }
-
-
-    // if (this.props.CoinCap_DASH === this.props.lowest_DASH) {
-    //   this.setState({
-    //     lowest_DASH: "green"
-    //   })
-    // } else if (this.props.CoinCap_DASH !== this.props.lowest_DASH) {
-    //   this.setState({
-    //     lowest_LTC: ""
-    //   })
-    // }
-    //
-    // if (this.props.CoinCap_ETH === this.props.lowest_ETH) {
-    //   this.setState({
-    //     lowest_ETH: "green"
-    //   })
-    // } else if (this.props.CoinCap_ETH !== this.props.lowest_ETH) {
-    //   this.setState({
-    //     lowest_LTC: ""
-    //   })
-    // }
   }
 
   render() {

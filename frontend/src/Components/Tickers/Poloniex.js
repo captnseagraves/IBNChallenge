@@ -14,35 +14,24 @@ class Poloniex extends Component {
 
   componentWillReceiveProps = () => {
     console.log(this.props);
-    if (this.props.Poloniex_LTC === this.props.lowest_LTC) {
-      this.setState({
-        lowest_LTC: "green"
-      })
-    } else if (this.props.Poloniex_LTC !== this.props.lowest_LTC) {
-      this.setState({
-        lowest_LTC: ""
-      })
-    }
 
-    if (this.props.Poloniex_DASH === this.props.lowest_DASH) {
-      this.setState({
-        lowest_DASH: "green"
-      })
-    } else if (this.props.Poloniex_DASH !== this.props.lowest_DASH) {
-      this.setState({
-        lowest_DASH: ""
-      })
-    }
+    this.props.Poloniex_LTC === this.props.lowest_LTC ? this.setState({
+      lowest_LTC: "green"
+    }) : this.setState({
+      lowest_LTC: ""
+    })
 
-    if (this.props.Poloniex_ETH === this.props.lowest_ETH) {
-      this.setState({
-        lowest_ETH: "green"
-      })
-    } else if (this.props.Poloniex_ETH !== this.props.lowest_ETH) {
-      this.setState({
-        lowest_ETH: ""
-      })
-    }
+    this.props.Poloniex_DASH === this.props.lowest_DASH ? this.setState({
+      lowest_DASH: "green"
+    }) : this.setState({
+      lowest_DASH: ""
+    })
+
+    this.props.Poloniex_ETH === this.props.lowest_ETH ? this.setState({
+      lowest_ETH: "green"
+    }) : this.setState({
+      lowest_ETH: ""
+    })
 
   }
 

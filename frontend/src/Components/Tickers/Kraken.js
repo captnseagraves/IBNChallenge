@@ -14,36 +14,25 @@ class Kraken extends Component {
 
   componentWillReceiveProps = () => {
     console.log(this.props);
+
+    this.props.Kraken_LTC === this.props.lowest_LTC ? this.setState({
+      lowest_LTC: "green"
+    }) : this.setState({
+      lowest_LTC: ""
+    })
+
+    this.props.Kraken_DASH === this.props.lowest_DASH ? this.setState({
+      lowest_DASH: "green"
+    }) : this.setState({
+      lowest_DASH: ""
+    })
+
+    this.props.Kraken_ETH === this.props.lowest_ETH ? this.setState({
+      lowest_ETH: "green"
+    }) : this.setState({
+      lowest_ETH: ""
+    })
     
-    if (this.props.Kraken_LTC === this.props.lowest_LTC) {
-      this.setState({
-        lowest_LTC: "green"
-      })
-    } else if (this.props.Kraken_LTC !== this.props.lowest_LTC) {
-      this.setState({
-        lowest_LTC: ""
-      })
-    }
-
-    if (this.props.Kraken_DASH === this.props.lowest_DASH) {
-      this.setState({
-        lowest_DASH: "green"
-      })
-    } else if (this.props.Kraken_DASH !== this.props.lowest_DASH) {
-      this.setState({
-        lowest_DASH: ""
-      })
-    }
-
-    if (this.props.Kraken_ETH === this.props.lowest_ETH) {
-      this.setState({
-        lowest_ETH: "green"
-      })
-    } else if (this.props.Kraken_ETH !== this.props.lowest_ETH) {
-      this.setState({
-        lowest_ETH: ""
-      })
-    }
   }
 
   render() {
