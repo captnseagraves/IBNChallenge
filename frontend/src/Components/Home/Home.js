@@ -35,17 +35,16 @@ class Home extends Component {
         return result.json()
       })
       .then((result2) => {
-        // console.log(result2[0].kraken);
 
-        let kraken_LTC = Number(result2[0].kraken[0].ask.price).toFixed(8);
-        let kraken_DASH = Number(result2[0].kraken[2].ask.price).toFixed(8);
-        let kraken_ETH = Number(result2[0].kraken[1].ask.price).toFixed(8);
-        let poloniex_LTC = result2[1].poloniex[0].lowestAsk;
-        let poloniex_DASH = result2[1].poloniex[2].lowestAsk;
-        let poloniex_ETH = result2[1].poloniex[1].lowestAsk;
-        let coinCap_LTC = (result2[2].coincap[1].price_btc).toFixed(8);
-        let coinCap_DASH = (result2[2].coincap[0].price_btc).toFixed(8);
-        let coinCap_ETH = (result2[2].coincap[2].price_btc).toFixed(8)
+        let kraken_LTC = Number(result2[0].kraken_LTC.ask.price).toFixed(8);
+        let kraken_DASH = Number(result2[1].kraken_DASH.ask.price).toFixed(8);
+        let kraken_ETH = Number(result2[2].kraken_ETH.ask.price).toFixed(8);
+        let poloniex_LTC = result2[3].poloniex_LTC.lowestAsk;
+        let poloniex_DASH = result2[4].poloniex_DASH.lowestAsk;
+        let poloniex_ETH = result2[5].poloniex_ETH.lowestAsk;
+        let coinCap_LTC = (result2[6].coincap_LTC.price_btc).toFixed(8);
+        let coinCap_DASH = (result2[7].coincap_DASH.price_btc).toFixed(8);
+        let coinCap_ETH = (result2[8].coincap_ETH.price_btc).toFixed(8)
 
         this.setState({
           Kraken_LTC: kraken_LTC,
@@ -57,9 +56,9 @@ class Home extends Component {
           CoinCap_LTC: coinCap_LTC,
           CoinCap_DASH: coinCap_DASH,
           CoinCap_ETH: coinCap_ETH,
-          lowest_LTC: String(Math.min(kraken_LTC, poloniex_LTC, coinCap_LTC)),
-          lowest_DASH: String(Math.min(kraken_DASH, poloniex_DASH, coinCap_DASH)),
-          lowest_ETH: String(Math.min(kraken_ETH, poloniex_ETH, coinCap_ETH))
+          lowest_LTC: Number(Math.min(kraken_LTC, poloniex_LTC, coinCap_LTC)).toFixed(8),
+          lowest_DASH: Number(Math.min(kraken_DASH, poloniex_DASH, coinCap_DASH)).toFixed(8),
+          lowest_ETH: Number(Math.min(kraken_ETH, poloniex_ETH, coinCap_ETH)).toFixed(8)
         })
 
       })

@@ -2,48 +2,67 @@ import React, { Component } from 'react';
 import './Tickers.css';
 
 
-
 class CoinCap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    lowest_LTC: {},
-    lowest_DASH: {},
-    lowest_ETH: {}
+    lowest_LTC: "",
+    lowest_DASH: "",
+    lowest_ETH: ""
     };
   }
 
   componentWillReceiveProps = () => {
     console.log(this.props);
-    if (this.props.CoinCap_LTC === this.props.lowest_LTC) {
-      this.setState({
-        lowest_LTC: {color:"green"}
-      })
-    } else if (this.props.CoinCap_LTC !== this.props.lowest_LTC) {
-      this.setState({
-        lowest_LTC: {}
-      })
-    }
 
-    if (this.props.CoinCap_DASH === this.props.lowest_DASH) {
-      this.setState({
-        lowest_DASH: {color:"green"}
-      })
-    } else if (this.props.CoinCap_DASH !== this.props.lowest_DASH) {
-      this.setState({
-        lowest_LTC: {}
-      })
-    }
+    this.props.CoinCap_LTC === this.props.lowest_LTC ? this.setState({
+      lowest_LTC: "green"
+    }) : this.setState({
+      lowest_LTC: ""
+    })
 
-    if (this.props.CoinCap_ETH === this.props.lowest_ETH) {
-      this.setState({
-        lowest_ETH: {color:"green"}
-      })
-    } else if (this.props.CoinCap_ETH !== this.props.lowest_ETH) {
-      this.setState({
-        lowest_LTC: {}
-      })
-    }
+    this.props.CoinCap_DASH === this.props.lowest_DASH ? this.setState({
+      lowest_DASH: "green"
+    }) : this.setState({
+      lowest_DASH: ""
+    })
+
+    this.props.CoinCap_ETH === this.props.lowest_ETH ? this.setState({
+      lowest_ETH: "green"
+    }) : this.setState({
+      lowest_ETH: ""
+    })
+
+    // if (this.props.CoinCap_LTC === this.props.lowest_LTC) {
+    //   this.setState({
+    //     lowest_LTC: "green"
+    //   })
+    // } else if (this.props.CoinCap_LTC !== this.props.lowest_LTC) {
+    //   this.setState({
+    //     lowest_LTC: ""
+    //   })
+    // }
+
+
+    // if (this.props.CoinCap_DASH === this.props.lowest_DASH) {
+    //   this.setState({
+    //     lowest_DASH: "green"
+    //   })
+    // } else if (this.props.CoinCap_DASH !== this.props.lowest_DASH) {
+    //   this.setState({
+    //     lowest_LTC: ""
+    //   })
+    // }
+    //
+    // if (this.props.CoinCap_ETH === this.props.lowest_ETH) {
+    //   this.setState({
+    //     lowest_ETH: "green"
+    //   })
+    // } else if (this.props.CoinCap_ETH !== this.props.lowest_ETH) {
+    //   this.setState({
+    //     lowest_LTC: ""
+    //   })
+    // }
   }
 
   render() {
@@ -59,9 +78,9 @@ class CoinCap extends Component {
 
     						<hr />
 
-                <h2 style={this.state.lowest_ETH} >ETH {this.props.CoinCap_ETH}</h2>
-                <h2 style={this.state.lowest_LTC} >LTC {this.props.CoinCap_LTC}</h2>
-                <h2 style={this.state.lowest_DASH} >DASH {this.props.CoinCap_DASH}</h2>
+                <h2 className={this.state.lowest_ETH} >ETH {this.props.CoinCap_ETH}</h2>
+                <h2 className={this.state.lowest_LTC} >LTC {this.props.CoinCap_LTC}</h2>
+                <h2 className={this.state.lowest_DASH} >DASH {this.props.CoinCap_DASH}</h2>
 
     						<hr />
 
