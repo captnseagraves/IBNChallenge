@@ -53,9 +53,7 @@ class Poloniex extends Component {
                 <hr />
 
                 <footer>
-                  <ul className="actions">
-                    <li><a href="https://poloniex.com/exchange#btc_eth" className="button">Go to Poloniex</a></li>
-                  </ul>
+                  <a href="https://poloniex.com/exchange#btc_eth" className="button">Go to Poloniex</a>
                 </footer>
               </section>
 

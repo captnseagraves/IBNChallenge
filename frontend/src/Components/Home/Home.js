@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Grid, Col, Row} from 'react-bootstrap'
 
 import Poloniex from '../Tickers/Poloniex.js'
 import CoinCap from '../Tickers/CoinCap.js'
@@ -70,20 +69,27 @@ class Home extends Component {
 
           <p className="intro color">Up-to-date prices for BitCoin to crypto-currency conversions from three top exchanges</p>
 
-        <Grid>
-          <Row className="show-grid exRow">
-            <Col xs={12} md={4} className="exchange"><code> <Poloniex Poloniex_LTC={this.state.Poloniex_LTC} Poloniex_DASH={this.state.Poloniex_DASH} Poloniex_ETH={this.state.Poloniex_ETH} lowest_LTC={this.state.lowest_LTC} lowest_DASH={this.state.lowest_DASH} lowest_ETH={this.state.lowest_ETH}/> </code></Col>
-            <Col xs={12} md={4} className="exchange"><code> <CoinCap CoinCap_LTC={this.state.CoinCap_LTC} CoinCap_DASH={this.state.CoinCap_DASH} CoinCap_ETH={this.state.CoinCap_ETH} lowest_LTC={this.state.lowest_LTC} lowest_DASH={this.state.lowest_DASH} lowest_ETH={this.state.lowest_ETH}/> </code></Col>
-            <Col xs={12} md={4} className="exchange"><code> <Kraken Kraken_LTC={this.state.Kraken_LTC} Kraken_DASH={this.state.Kraken_DASH} Kraken_ETH={this.state.Kraken_ETH} lowest_LTC={this.state.lowest_LTC} lowest_DASH={this.state.lowest_DASH} lowest_ETH={this.state.lowest_ETH}/> </code></Col>
-          </Row>
-        </Grid>
+            <div className="container">
+              <div className="exchange">
+                <Poloniex Poloniex_LTC={this.state.Poloniex_LTC} Poloniex_DASH={this.state.Poloniex_DASH} Poloniex_ETH={this.state.Poloniex_ETH} lowest_LTC={this.state.lowest_LTC} lowest_DASH={this.state.lowest_DASH} lowest_ETH={this.state.lowest_ETH}/>
+              </div>
+              <div className="exchange">
+                <CoinCap CoinCap_LTC={this.state.CoinCap_LTC} CoinCap_DASH={this.state.CoinCap_DASH} CoinCap_ETH={this.state.CoinCap_ETH} lowest_LTC={this.state.lowest_LTC} lowest_DASH={this.state.lowest_DASH} lowest_ETH={this.state.lowest_ETH}/>
+              </div>
+              <div className="exchange">
+                <Kraken Kraken_LTC={this.state.Kraken_LTC} Kraken_DASH={this.state.Kraken_DASH} Kraken_ETH={this.state.Kraken_ETH} lowest_LTC={this.state.lowest_LTC} lowest_DASH={this.state.lowest_DASH} lowest_ETH={this.state.lowest_ETH}/>
+              </div>
+            </div>
 
 
-        <footer id="footer">
-          <ul className="copyright">
-            <li>**Prices updated at three second intervals and may not represent price at time of purchase**</li> <br></br>
-            <li>&copy; Kevin Seagraves 2017</li>
-          </ul>
+
+
+
+        <footer className="footer">
+          <div className="copyright">
+            <p>**Prices updated at three second intervals and may not represent price at time of purchase**</p>
+            <p>&copy; Kevin Seagraves 2017</p>
+          </div>
         </footer>
       </div>
     )

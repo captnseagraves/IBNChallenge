@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-import './App.css';
+import './newApp.css';
 
 import Home from './Components/Home/Home.js'
 

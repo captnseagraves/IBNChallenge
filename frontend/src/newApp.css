@@ -1,0 +1,80 @@
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.button {
+  border: solid 1px grey;
+  padding: 0.5em;
+  text-decoration: none;
+  color: grey;
+  margin-bottom: 5em;
+}
+
+.exchange {
+  background: #ffffff;
+  margin: 1vmin;
+  display: inline;
+  text-align: center;
+  width: 25%;
+  padding-bottom: 2em;
+}
+
+.color {
+  text-shadow: 2px 1px white;
+  margin:auto;
+  text-align: center;
+}
+
+.header {
+  font-size: 7vmin;
+  padding: 3vmin;
+  font-family: 'Ultra', serif;
+
+}
+
+.footer {
+  text-align: center;
+  margin: auto;
+}
+
+.intro {
+  font-size: 2.25vmin;
+}
+
+.green {
+  color: green;
+}
+
+#particles canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+body {
+  height: 100%;
+  background-color: #ffffff;
+  background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("images/bg.jpg");
+  background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("images/bg.jpg");
+  background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
+  background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("images/bg.jpg");
+  background-repeat: repeat,			no-repeat,			no-repeat;
+  background-size: 100px 100px, cover,				cover;
+  background-position: top left,		center center,		bottom center;
+  background-attachment: fixed,			fixed,				fixed;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px #c8cccf;
+  margin: 2em;
+}

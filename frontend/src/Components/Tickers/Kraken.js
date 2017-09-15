@@ -53,9 +53,7 @@ class Kraken extends Component {
                 <hr />
 
                 <footer>
-                  <ul className="actions">
-                    <li><a href="https://www.kraken.com/charts" className="button">Go to Kraken</a></li>
-                  </ul>
+                    <a href="https://www.kraken.com/charts" className="button">Go to Kraken</a>
     						</footer>
               </section>
 

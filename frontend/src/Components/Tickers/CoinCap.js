@@ -52,11 +52,8 @@ class CoinCap extends Component {
 
     						<hr />
 
-    						<footer>
-                  <ul className="actions">
-                    <li><a href="https://coinmarketcap.com/" className="button">Go to CoinCap</a></li>
-                  </ul>
-    						</footer>
+                    <a href="https://coinmarketcap.com/" className="button">Go to CoinCap</a>
+
     					</section>
 
 
