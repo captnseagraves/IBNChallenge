@@ -7,15 +7,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  padding-bottom: 8vmin;
 }
 
 .button {
   border: solid 1px grey;
   padding: 0.5em;
   text-decoration: none;
-  color: grey;
   margin-bottom: 5em;
+  color: grey;
 }
 
 .exchange {
@@ -24,29 +24,32 @@
   display: inline;
   text-align: center;
   width: 25%;
-  padding-bottom: 2em;
+  padding-bottom: 3vmin;
+  color: grey;
 }
 
 .color {
-  text-shadow: 2px 1px white;
   margin:auto;
   text-align: center;
 }
 
 .header {
-  font-size: 7vmin;
+  font-size: 10vmin;
   padding: 3vmin;
+  text-shadow: 2px 2px white;
   font-family: 'Ultra', serif;
-
 }
 
 .footer {
   text-align: center;
   margin: auto;
+  color: white;
 }
 
 .intro {
-  font-size: 2.25vmin;
+  font-size: 3vmin;
+  color: white;
+  padding-bottom: 10vmin;
 }
 
 .green {

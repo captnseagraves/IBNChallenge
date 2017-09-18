@@ -63,7 +63,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="allBody">
 
           <h1 className="header color">BitTracker</h1>
 
